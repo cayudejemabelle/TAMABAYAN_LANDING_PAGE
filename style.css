@@ -1,0 +1,317 @@
+/* --- General Reset and Body Styles --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Changed body background to dark to match the overall design's feel */
+    background-color: #222; 
+    color: #333;
+}
+
+/* --- Navigation Bar Styles --- */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+.navbar a:hover {
+    color: #d1b84f;
+}
+
+/* --- Hero Section (Joe's Tambayan) --- */
+.hero {
+    /* UPDATED: Using the Bar Shelf Background Image (Screenshot 2025-12-14 143935.jpg) */
+    background-image: url('counter.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+    position: relative;
+    /* Adding dark overlay to match the design's dark tone */
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+}
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+    font-family: 'Georgia', serif; 
+}
+.order-button {
+    background-color: #d1b84f;
+    color: black;
+    padding: 10px 30px;
+    text-decoration: none;
+    border: 2px solid white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: background-color 0.3s;
+}
+.order-button:hover {
+    background-color: #fdd835;
+}
+
+/* --- Section Headings (General) --- */
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 40px 0 20px;
+    text-transform: uppercase;
+    font-family: 'Georgia', serif; 
+    color: white; /* Changed color for dark sections */
+}
+
+/* --- VIP Rooms Section --- */
+.vip-rooms {
+    padding: 20px 20px 40px;
+    text-align: center;
+    /* UPDATED: Using the Microphone image as a background */
+    background-image: url('mic.png'); 
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #000; /* Black background to match the sample */
+    color: white;
+    position: relative; /* Needed for text shadow */
+}
+.rooms-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.room-image {
+    width: 45%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+.room-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 20px 0;
+}
+.details-list {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+.details-list i {
+    color: #4dcfff; 
+    margin-right: 8px;
+}
+.price-box {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #d1b84f;
+}
+.price-box span {
+    font-size: 0.7em;
+    font-weight: normal;
+    color: #ccc;
+}
+.sing-out {
+    font-style: italic;
+    font-size: 1.1em;
+    margin-top: 15px;
+    color: white;
+}
+
+/* --- Foods Section --- */
+.foods-section {
+    /* UPDATED: Also using the dark background */
+    background-color: #000;
+    padding-bottom: 40px;
+}
+.foods-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 20px;
+}
+.food-item {
+    text-align: center;
+    position: relative;
+}
+.food-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.food-caption {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white; /* Text color for dark background */
+}
+.food-price {
+    position: absolute;
+    bottom: 50px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    z-index: 5;
+    border: 1px solid #d1b84f; /* Added border to match the beverage price boxes */
+}
+
+/* --- Beverages Section --- */
+.beverages-header {
+    background-color: #d1b84f; /* Changed to the gold color from the design */
+    color: black;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.beverages-content {
+    padding: 20px;
+    background-color: #000; /* Dark background for the content area */
+}
+.best-seller {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    font-style: italic;
+    color: white;
+}
+.beverage-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.beverage-item {
+    width: 15%;
+    max-width: 120px;
+    text-align: center;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.beverage-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.beverage-price {
+    background-color: black;
+    color: white;
+    padding: 5px 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-top: 2px solid #d1b84f;
+}
+/* Color overlays matching the design */
+.bg-red { background-color: #c95c5c; }
+.bg-white { background-color: #f0f0f0; }
+.bg-orange-red { background-color: #e07455; }
+.bg-dark-orange { background-color: #a7664e; }
+.bg-yellow-orange { background-color: #d1a469; }
+.bg-teal { background-color: #72a6b4; }
+
+
+/* --- Contact Section --- */
+.contact {
+    background-color: #a9e0ed; 
+    padding: 40px 20px;
+    text-align: center;
+}
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.contact-item i {
+    margin-right: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+.location {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+/* --- Responsive Adjustments (Mobile View) --- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .navbar a {
+        margin: 0 10px;
+        font-size: 0.9em;
+    }
+    .rooms-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .room-image {
+        width: 80%;
+        max-width: 400px;
+        margin-bottom: 10px;
+    }
+    .room-details {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .foods-container {
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    }
+    .beverage-list {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .beverage-item {
+        width: 40%; 
+        max-width: none;
+    }
+    .contact-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
